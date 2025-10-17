@@ -1,67 +1,82 @@
-import React from 'react';
-import { NavLink } from 'react-router';
+import React, { useState, useEffect } from 'react';
+
 
 const Navbar = () => {
+    const [activeSection, setActiveSection] = useState('home');
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const sections = ['home', 'about', 'skills', 'education', 'projects', 'contact'];
+            const scrollY = window.pageYOffset;
+
+            sections.forEach(section => {
+                const element = document.getElementById(section);
+                if (element) {
+                    const offsetTop = element.offsetTop - 100;
+                    const offsetBottom = offsetTop + element.offsetHeight;
+
+                    if (scrollY >= offsetTop && scrollY < offsetBottom) {
+                        setActiveSection(section);
+                    }
+                }
+            });
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const scrollToSection = (sectionId) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            window.scrollTo({
+                top: element.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        }
+    };
+
     const links = <>
         <li>
-            <NavLink
-                to='/'
-                className={({ isActive }) =>
-                    isActive
-                        ? 'text-white font-medium text-sm uppercase tracking-wider underline'
-                        : 'text-white hover:text-white font-medium uppercase tracking-wider transition-colors duration-300'
-                }
+            <button
+                onClick={() => scrollToSection('home')}
+                className={`${activeSection === 'home' ? 'text-white font-medium text-sm uppercase tracking-wider underline' : 'text-white hover:text-white font-medium uppercase tracking-wider transition-colors duration-300'}`}
             >
                 HOME
-            </NavLink>
+            </button>
         </li>
         <li>
-            <NavLink
-                to='/about'
-                className={({ isActive }) =>
-                    isActive
-                        ? 'text-white font-medium text-sm uppercase tracking-wider underline'
-                        : 'text-white hover:text-white font-medium uppercase tracking-wider transition-colors duration-300'
-                }
+            <button
+                onClick={() => scrollToSection('about')}
+                className={`${activeSection === 'about' ? 'text-white font-medium text-sm uppercase tracking-wider underline' : 'text-white hover:text-white font-medium uppercase tracking-wider transition-colors duration-300'}`}
             >
                 ABOUT
-            </NavLink>
+            </button>
         </li>
         <li>
-            <NavLink
-                to='/projects'
-                className={({ isActive }) =>
-                    isActive
-                        ? 'text-white font-medium text-sm uppercase tracking-wider underline'
-                        : 'text-white hover:text-white font-medium uppercase tracking-wider transition-colors duration-300'
-                }
-            >
-                PROJECTS
-            </NavLink>
-        </li>
-        <li>
-            <NavLink
-                to='/skills'
-                className={({ isActive }) =>
-                    isActive
-                        ? 'text-white font-medium text-sm uppercase tracking-wider underline'
-                        : 'text-white hover:text-white font-medium uppercase tracking-wider transition-colors duration-300'
-                }
+            <button
+                onClick={() => scrollToSection('skills')}
+                className={`${activeSection === 'skills' ? 'text-white font-medium text-sm uppercase tracking-wider underline' : 'text-white hover:text-white font-medium uppercase tracking-wider transition-colors duration-300'}`}
             >
                 SKILLS
-            </NavLink>
+            </button>
         </li>
         <li>
-            <NavLink
-                to='/contact'
-                className={({ isActive }) =>
-                    isActive
-                        ? 'text-white font-medium text-sm uppercase tracking-wider underline'
-                        : 'text-white hover:text-white font-medium uppercase tracking-wider transition-colors duration-300'
-                }
+            <button
+                onClick={() => scrollToSection('projects')}
+                className={`${activeSection === 'projects' ? 'text-white font-medium text-sm uppercase tracking-wider underline' : 'text-white hover:text-white font-medium uppercase tracking-wider transition-colors duration-300'}`}
+            >
+                PROJECTS
+            </button>
+        </li>
+
+        <li>
+            <button
+                onClick={() => scrollToSection('contact')}
+                className={`${activeSection === 'contact' ? 'text-white font-medium text-sm uppercase tracking-wider underline' : 'text-white hover:text-white font-medium uppercase tracking-wider transition-colors duration-300'}`}
             >
                 CONTACT
-            </NavLink>
+            </button>
         </li>
     </>
 

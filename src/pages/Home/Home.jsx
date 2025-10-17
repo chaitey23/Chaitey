@@ -9,12 +9,24 @@ import ContactSection from '../../Components/ContactSection';
 const Home = () => {
     return (
         <div>
-            <HeroSection></HeroSection>
-            <AboutMe></AboutMe>
-            <Skills></Skills>
-            <EducationalQualification></EducationalQualification>
-            <ProjectsSection></ProjectsSection>
-            <ContactSection></ContactSection>
+            <section id="home">
+                <HeroSection></HeroSection>
+            </section>
+            <section id="about">
+                <AboutMe></AboutMe>
+            </section>
+            <section id="skills">
+                <Skills></Skills>
+            </section>
+            <section id="education">
+                <EducationalQualification></EducationalQualification>
+            </section>
+            <section id="projects">
+                <ProjectsSection></ProjectsSection>
+            </section>
+            <section id="contact">
+                <ContactSection></ContactSection>
+            </section>
         </div>
     );
 };
