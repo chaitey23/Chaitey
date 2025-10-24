@@ -136,7 +136,7 @@ const ProjectsSection = () => {
                                         Live Demo
                                     </a>
                                     <Link
-                                        to={`/project/${project.id}`}
+                                        to='/project/:id'
                                         state={{ project }}
                                         className="flex-1 border border-white/30 text-white py-2 px-4 rounded-lg text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2"
                                     >
