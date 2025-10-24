@@ -33,9 +33,8 @@ const ProjectsSection = () => {
             liveLink: "https://gardening-hub-application.web.app",
             githubLink: "https://github.com/chaitey23/gardening-hub",
             description: "An e-commerce platform for gardening enthusiasts to buy plants, tools, and get gardening tips.",
-            technologies: ["React", "Firebase", "CSS3", "JavaScript", "Stripe Integration"],
+            technologies: ["React", "Firebase", "CSS3", "JavaScript"],
             challenges: [
-                "Integrating Stripe payment gateway with secure transaction handling",
                 "Managing complex product inventory and stock updates in real-time",
                 "Implementing user review and rating system with photo uploads"
             ],
