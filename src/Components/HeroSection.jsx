@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaGithub, FaLinkedin, FaTwitter, FaDownload, FaEye } from 'react-icons/fa';
-import profilePhoto from '../assets/name-logoo.png'
+import profilePhoto from '../assets/portfolioImg.png'
 const HeroSection = () => {
     const [text, setText] = useState('');
     const [isDeleting, setIsDeleting] = useState(false);
@@ -32,6 +32,10 @@ const HeroSection = () => {
         const timer = setTimeout(handleTyping, typingSpeed);
         return () => clearTimeout(timer);
     }, [text, isDeleting, loopNum, titles]);
+    const openResume = () => {
+        const resumeLink = 'https://drive.google.com/file/d/1OKHQzsNVS98yDwyqKi-QIPUgfbcojuwG/view?usp=drive_link';
+        window.open(resumeLink, '_blank', 'noopener,noreferrer');
+    };
 
     return (
         <section
@@ -64,7 +68,7 @@ const HeroSection = () => {
 
                     <div className="flex flex-col sm:flex-row items-center gap-6 pt-4">
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <button className="bg-gradient-to-r from-[#8B5FBF] to-[#6D48C5] text-white px-8 py-4 rounded-full text-lg font-medium uppercase tracking-wider hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 flex items-center gap-2">
+                            <button onClick={openResume} className="bg-gradient-to-r from-[#8B5FBF] to-[#6D48C5] text-white px-8 py-4 rounded-full text-lg font-medium uppercase tracking-wider hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 flex items-center gap-2 cursor-pointer">
 
                                 HERE ME
                             </button>
@@ -101,7 +105,7 @@ const HeroSection = () => {
                                     <img
                                         src={profilePhoto}
                                         alt="Chaitey"
-                                        className="w-full h-full object-cover"
+                                        className="w-full h-full object-contain"
                                     />
                                 </div>
 

@@ -35,7 +35,10 @@ const Navbar = () => {
             });
         }
     };
-
+    const openResume = () => {
+        const resumeLink = 'https://drive.google.com/file/d/1OKHQzsNVS98yDwyqKi-QIPUgfbcojuwG/view?usp=drive_link';
+        window.open(resumeLink, '_blank', 'noopener,noreferrer');
+    };
     const links = <>
         <li>
             <button
@@ -113,7 +116,7 @@ const Navbar = () => {
                     </ul>
                 </div>
 
-                <button className="bg-[#8B5FBF] hover:bg-black border-2 border-transparent hover:border-white text-white px-4 py-2 lg:px-8 lg:py-4 rounded-full text-xs lg:text-sm font-medium uppercase tracking-wider transition-all duration-300 whitespace-nowrap cursor-pointer">
+                <button onClick={openResume} className="bg-[#8B5FBF] hover:bg-black border-2 border-transparent hover:border-white text-white px-4 py-2 lg:px-8 lg:py-4 rounded-full text-xs lg:text-sm font-medium uppercase tracking-wider transition-all duration-300 whitespace-nowrap cursor-pointer">
                     Resume
                 </button>
             </div>

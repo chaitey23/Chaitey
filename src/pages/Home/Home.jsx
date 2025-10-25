@@ -6,6 +6,7 @@ import EducationalQualification from '../../Components/EducationalQualification'
 import ProjectsSection from '../../Components/ProjectsSection';
 import ContactSection from '../../Components/ContactSection';
 
+
 const Home = () => {
     return (
         <div>

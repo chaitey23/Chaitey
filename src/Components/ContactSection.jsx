@@ -132,10 +132,10 @@ const ContactSection = () => {
                                 <div>
                                     <p className="text-gray-400 text-sm">Phone</p>
                                     <a
-                                        href="tel:01842618153"
+                                        href="tel:+880 1XXXXXXXXX"
                                         className="text-white font-medium hover:text-indigo-300 transition-colors duration-300"
                                     >
-                                        +880 1842-618153
+                                        +880 1XXXXXXXXX
                                     </a>
                                 </div>
                             </motion.div>

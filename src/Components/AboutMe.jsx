@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaDownload, FaLinkedin, FaTwitter, FaFacebook, FaCode, FaHeart, FaGamepad, FaMusic, FaCoffee } from 'react-icons/fa';
-import aboutPhoto from '../assets/name-logoo.png';
+import aboutPhoto from '../assets/portfolioImg.png';
 
 // Animation variants
 const containerVariants = {
@@ -127,7 +127,10 @@ const socialIconVariants = {
         }
     }
 };
-
+const openResume = () => {
+    const resumeLink = 'https://drive.google.com/file/d/1OKHQzsNVS98yDwyqKi-QIPUgfbcojuwG/view?usp=drive_link';
+    window.open(resumeLink, '_blank', 'noopener,noreferrer');
+};
 const AboutMe = () => {
     return (
         <motion.section
@@ -174,7 +177,7 @@ const AboutMe = () => {
                                 <motion.img
                                     src={aboutPhoto}
                                     alt="Chaitey"
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-contain"
                                     whileHover={{ scale: 1.05 }}
                                     transition={{ duration: 0.5 }}
                                 />
@@ -294,14 +297,14 @@ const AboutMe = () => {
                                 ))}
                             </div>
 
-                            <motion.button
-                                className="bg-gradient-to-r from-[#8B5FBF] to-[#6D48C5] text-white px-8 py-4 rounded-full text-lg font-medium uppercase tracking-wider flex items-center gap-2"
+                            <motion.button onClick={openResume}
+                                className="bg-gradient-to-r from-[#8B5FBF] to-[#6D48C5] text-white px-8 py-4 rounded-full text-lg font-medium uppercase tracking-wider flex items-center gap-2 cursor-pointer"
                                 variants={buttonVariants}
                                 whileHover="hover"
                                 whileTap="tap"
                             >
                                 <FaDownload className="text-xl" />
-                                Download CV
+                                Download Resume
                             </motion.button>
                         </motion.div>
                     </motion.div>
