@@ -85,7 +85,7 @@ const HeroSection = () => {
                                 className="text-gray-400 hover:text-white transition-colors duration-300 text-3xl">
                                 <FaGithub />
                             </a>
-                            <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300 text-3xl">
+                            <a href="https://www.linkedin.com/in/jannatul-ferdouse-chaiteey" className="text-gray-400 hover:text-white transition-colors duration-300 text-3xl">
                                 <FaLinkedin />
                             </a>
                         </div>

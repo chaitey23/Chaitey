@@ -127,6 +127,23 @@ const socialIconVariants = {
         }
     }
 };
+const socialLinks = [
+    {
+        icon: FaLinkedin,
+        url: 'https://www.linkedin.com/in/jannatul-ferdouse-chaiteey/',
+        name: 'LinkedIn'
+    },
+    {
+        icon: FaTwitter,
+        url: '#', // Add your Twitter URL if you have one
+        name: 'Twitter'
+    },
+    {
+        icon: FaFacebook,
+        url: 'https://www.facebook.com/chaetey001',
+        name: 'Facebook'
+    }
+];
 const openResume = () => {
     const resumeLink = 'https://drive.google.com/file/d/1OKHQzsNVS98yDwyqKi-QIPUgfbcojuwG/view?usp=drive_link';
     window.open(resumeLink, '_blank', 'noopener,noreferrer');
@@ -280,10 +297,12 @@ const AboutMe = () => {
                             variants={itemVariants}
                         >
                             <div className="flex gap-6">
-                                {[FaLinkedin, FaTwitter, FaFacebook].map((Icon, index) => (
+                                {socialLinks.map((social, index) => (
                                     <motion.a
-                                        key={index}
-                                        href="#"
+                                        key={social.name}
+                                        href={social.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="text-gray-400 transition-colors duration-300 text-2xl"
                                         variants={socialIconVariants}
                                         initial="hidden"
@@ -292,7 +311,7 @@ const AboutMe = () => {
                                         whileHover="hover"
                                         transition={{ delay: index * 0.1 }}
                                     >
-                                        <Icon />
+                                        <social.icon />
                                     </motion.a>
                                 ))}
                             </div>
