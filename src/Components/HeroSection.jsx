@@ -33,7 +33,7 @@ const HeroSection = () => {
         return () => clearTimeout(timer);
     }, [text, isDeleting, loopNum, titles]);
     const openResume = () => {
-        const resumeLink = 'https://drive.google.com/file/d/1OKHQzsNVS98yDwyqKi-QIPUgfbcojuwG/view?usp=drive_link';
+        const resumeLink = 'https://drive.google.com/file/d/1kEbsGF-3efGRY6BV4UfWgUzqm2Rq0wjI/view?usp=sharing';
         window.open(resumeLink, '_blank', 'noopener,noreferrer');
     };
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from 'emailjs-com';
 
 const ContactSection = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -9,17 +10,33 @@ const ContactSection = () => {
         e.preventDefault();
         setIsSubmitting(true);
 
-        // Simulate form submission
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        try {
+            await emailjs.sendForm(
+                'service_ekj5zpn',
+                'template_kyv832i',
+                e.target,
+                '_S7vcrlCMbCcChbAw'
+            )
 
-        setIsSubmitting(false);
-        setIsSubmitted(true);
+            // Simulate form submission
+            // await new Promise(resolve => setTimeout(resolve, 2000));
 
-        // Reset form after 3 seconds
-        setTimeout(() => {
-            setIsSubmitted(false);
-            e.target.reset();
-        }, 3000);
+            setIsSubmitted(true);
+
+            // Reset form after 3 seconds
+            setTimeout(() => {
+                setIsSubmitted(false);
+                e.target.reset();
+            }, 3000);
+        }
+        catch (error) {
+            console.error('EmailJS Error:', error);
+            alert('Oops! Something went wrong, please try again.');
+        }
+        finally {
+
+            setIsSubmitting(false);
+        }
     };
 
     // Animation variants
@@ -170,6 +187,7 @@ const ContactSection = () => {
                                     <input
                                         type="text"
                                         id="name"
+                                        name="name"
                                         required
                                         className="w-full px-4 py-3 bg-white/5 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition-all duration-300 outline-none"
                                         placeholder="Enter your name"
@@ -187,6 +205,7 @@ const ContactSection = () => {
                                     <input
                                         type="email"
                                         id="email"
+                                        name="email"
                                         required
                                         className="w-full px-4 py-3 bg-white/5 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition-all duration-300 outline-none"
                                         placeholder="your@email.com"
@@ -205,6 +224,7 @@ const ContactSection = () => {
                                 <input
                                     type="text"
                                     id="subject"
+                                    name="subject"
                                     required
                                     className="w-full px-4 py-3 bg-white/5 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition-all duration-300 outline-none"
                                     placeholder="What's this about?"
@@ -222,6 +242,7 @@ const ContactSection = () => {
                                 <textarea
                                     id="message"
                                     rows="5"
+                                    name="message"
                                     required
                                     className="w-full px-4 py-3 bg-white/5 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition-all duration-300 outline-none resize-none"
                                     placeholder="Tell me about your project..."

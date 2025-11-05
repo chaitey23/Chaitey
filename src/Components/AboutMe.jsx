@@ -135,7 +135,7 @@ const socialLinks = [
     },
     {
         icon: FaTwitter,
-        url: '#', // Add your Twitter URL if you have one
+        url: '#',
         name: 'Twitter'
     },
     {
@@ -144,9 +144,9 @@ const socialLinks = [
         name: 'Facebook'
     }
 ];
-const openResume = () => {
-    const resumeLink = 'https://drive.google.com/file/d/1OKHQzsNVS98yDwyqKi-QIPUgfbcojuwG/view?usp=drive_link';
-    window.open(resumeLink, '_blank', 'noopener,noreferrer');
+const openCv = () => {
+    const cvLink = 'https://drive.google.com/file/d/1UrEOkf2V6MEZZeR5r8mU2x0OJhBggaEV/view?usp=sharing';
+    window.open(cvLink, '_blank', 'noopener,noreferrer');
 };
 const AboutMe = () => {
     return (
@@ -316,14 +316,14 @@ const AboutMe = () => {
                                 ))}
                             </div>
 
-                            <motion.button onClick={openResume}
+                            <motion.button onClick={openCv}
                                 className="bg-gradient-to-r from-[#8B5FBF] to-[#6D48C5] text-white px-8 py-4 rounded-full text-lg font-medium uppercase tracking-wider flex items-center gap-2 cursor-pointer"
                                 variants={buttonVariants}
                                 whileHover="hover"
                                 whileTap="tap"
                             >
                                 <FaDownload className="text-xl" />
-                                Download Resume
+                                Download CV
                             </motion.button>
                         </motion.div>
                     </motion.div>
