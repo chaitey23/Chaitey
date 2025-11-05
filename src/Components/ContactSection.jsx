@@ -27,7 +27,7 @@ const ContactSection = () => {
             setTimeout(() => {
                 setIsSubmitted(false);
                 e.target.reset();
-            }, 3000);
+            }, 2000);
         }
         catch (error) {
             console.error('EmailJS Error:', error);
