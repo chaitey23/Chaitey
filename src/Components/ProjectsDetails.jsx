@@ -34,14 +34,14 @@ const ProjectDetails = () => {
         <div className="min-h-screen py-20 px-4 lg:px-16 relative overflow-hidden" style={{
             background: 'linear-gradient(135deg, #07233b 0%, #041d34 25%, #04192d 50%, #040e18 75%, #050c16 100%)'
         }}>
-            {/* Background Pattern */}
+
             <div className="absolute inset-0 opacity-5">
                 <div className="absolute top-20 left-10 w-32 h-32 bg-[#8B5FBF] rounded-full blur-3xl"></div>
                 <div className="absolute bottom-20 right-10 w-40 h-40 bg-[#6D48C5] rounded-full blur-3xl"></div>
             </div>
 
             <div className="max-w-6xl mx-auto relative z-10">
-                {/* Back Button */}
+
                 <Link
                     to="/"
                     className="inline-flex items-center gap-2 text-white mb-8 hover:text-[#8B5FBF] transition-colors duration-300"
@@ -50,7 +50,6 @@ const ProjectDetails = () => {
                     Back to Projects
                 </Link>
 
-                {/* Project Header */}
                 <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                         <div>
@@ -86,6 +85,7 @@ const ProjectDetails = () => {
                                 src={project.image}
                                 alt={project.name}
                                 className="w-full h-64 object-cover"
+                                style={{ objectPosition: 'top' }}
                             />
                         </div>
                     </div>
@@ -93,9 +93,9 @@ const ProjectDetails = () => {
 
                 {/* Project Details Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    {/* Left Column */}
+
                     <div className="space-y-8">
-                        {/* Technology Stack */}
+
                         <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
                             <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                                 <FaCode className="text-[#8B5FBF]" />
@@ -112,8 +112,6 @@ const ProjectDetails = () => {
                                 ))}
                             </div>
                         </div>
-
-                        {/* Challenges Faced */}
                         <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
                             <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                                 <FaExclamationTriangle className="text-[#8B5FBF]" />
@@ -160,7 +158,7 @@ const ProjectDetails = () => {
                             </p>
                         </div>
 
-                        {/* Future Plans & Improvements */}
+
                         <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
                             <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                                 <FaLightbulb className="text-[#8B5FBF]" />
@@ -195,7 +193,6 @@ const ProjectDetails = () => {
                     </div>
                 </div>
 
-                {/* Additional Project Features */}
                 <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 mt-8">
                     <h3 className="text-xl font-bold text-white mb-6 text-center">
                         Key Features

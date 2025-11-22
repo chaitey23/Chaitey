@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { FaExternalLinkAlt, FaGithub, FaTools } from 'react-icons/fa';
 import { Link } from 'react-router';
-import libraryImg from '../assets/libraryManagement.png'
-import GardenImg from '../assets/gardeningHub.png'
-import newspaper from '../assets/newspaper.png'
+import libraryImg from '../assets/library-management-31a51.web.app_.png'
+import GardenImg from '../assets/gardening-hub-application.web.app_.png'
+import newspaper from '../assets/newspaper-fullstack-webs-53e81.web.app_.png'
 const ProjectsSection = () => {
     const [hoveredProject, setHoveredProject] = useState(null);
     const projects = [
@@ -68,14 +68,14 @@ const ProjectsSection = () => {
         <section id="projects" className="py-20 px-4 lg:px-16 relative overflow-hidden" style={{
             background: 'linear-gradient(135deg, #07233b 0%, #041d34 25%, #04192d 50%, #040e18 75%, #050c16 100%)'
         }}>
-            {/* Background Pattern */}
+
             <div className="absolute inset-0 opacity-5">
                 <div className="absolute top-20 left-10 w-32 h-32 bg-[#8B5FBF] rounded-full blur-3xl"></div>
                 <div className="absolute bottom-20 right-10 w-40 h-40 bg-[#6D48C5] rounded-full blur-3xl"></div>
             </div>
 
             <div className="max-w-7xl mx-auto relative z-10">
-                {/* Section Header */}
+
                 <div className="text-center mb-16">
                     <h2 className="text-4xl lg:text-5xl font-bold text-white uppercase mb-4">
                         My <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8B5FBF] to-[#6D48C5]">Projects</span>
@@ -90,16 +90,15 @@ const ProjectsSection = () => {
                     {projects.map((project) => (
                         <div
                             key={project.id}
-                            className="group bg-white/5 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/10 hover:border-[#8B5FBF]/50 transition-all duration-500 hover:transform hover:-translate-y-2"
+                            className="group bg-white/5 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/10 hover:border-[#8B5FBF]/50 transition-all duration-300 hover:transform hover:-translate-y-2"
                             onMouseEnter={() => setHoveredProject(project.id)}
                             onMouseLeave={() => setHoveredProject(null)}
                         >
-                            {/* Project Image Container with Scroll Effect */}
                             <div className="relative overflow-hidden h-48">
                                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-10"></div>
                                 <div
-                                    className={`w-full h-[120%] transition-transform duration-5000 ease-in-out ${hoveredProject === project.id ? 'translate-y-[-20%]' : 'translate-y-0'
-                                        }`}
+                                    className={`w-full h-[150%] transition-transform duration-5000 ease-in-out ${hoveredProject === project.id ? 'translate-y-[-30%]' : 'translate-y-0'
+                                        } bg-cover bg-top`}
                                     style={{
                                         backgroundImage: `url(${project.image})`,
                                         backgroundSize: 'cover',
@@ -107,8 +106,6 @@ const ProjectsSection = () => {
                                     }}
                                 ></div>
                             </div>
-
-                            {/* Project Content */}
                             <div className="p-6">
                                 <h3 className="text-xl font-bold text-white mb-3">{project.name}</h3>
                                 <p className="text-gray-300 text-sm mb-4 leading-relaxed">{project.description}</p>

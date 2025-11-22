@@ -18,12 +18,9 @@ const ContactSection = () => {
                 '_S7vcrlCMbCcChbAw'
             )
 
-            // Simulate form submission
-            // await new Promise(resolve => setTimeout(resolve, 2000));
+
 
             setIsSubmitted(true);
-
-            // Reset form after 3 seconds
             setTimeout(() => {
                 setIsSubmitted(false);
                 e.target.reset();
@@ -38,8 +35,6 @@ const ContactSection = () => {
             setIsSubmitting(false);
         }
     };
-
-    // Animation variants
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -67,7 +62,6 @@ const ContactSection = () => {
                 background: 'linear-gradient(135deg, #0a1f38 0%, #07233b 25%, #061d32 50%, #05182a 75%, #041421 100%)'
             }}>
 
-            {/* Background Pattern/Effects */}
             <div className="absolute inset-0 opacity-10">
                 <div className="absolute top-10 left-10 w-20 h-20 bg-blue-400 rounded-full blur-xl"></div>
                 <div className="absolute bottom-10 right-10 w-32 h-32 bg-purple-500 rounded-full blur-xl"></div>
@@ -75,7 +69,6 @@ const ContactSection = () => {
             </div>
 
             <div className="max-w-6xl mx-auto relative z-10">
-                {/* Header Section */}
                 <motion.div
                     initial={{ opacity: 0, y: -30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -149,10 +142,10 @@ const ContactSection = () => {
                                 <div>
                                     <p className="text-gray-400 text-sm">Phone</p>
                                     <a
-                                        href="tel:+880 1XXXXXXXXX"
+                                        href="tel:+880 1*********"
                                         className="text-white font-medium hover:text-indigo-300 transition-colors duration-300"
                                     >
-                                        +880 1XXXXXXXXX
+                                        +880 1*********
                                     </a>
                                 </div>
                             </motion.div>
@@ -213,7 +206,7 @@ const ContactSection = () => {
                                 </motion.div>
                             </div>
 
-                            {/* Subject Field */}
+
                             <motion.div variants={itemVariants}>
                                 <label
                                     htmlFor="subject"
@@ -231,7 +224,6 @@ const ContactSection = () => {
                                 />
                             </motion.div>
 
-                            {/* Message Field */}
                             <motion.div variants={itemVariants}>
                                 <label
                                     htmlFor="message"
@@ -249,7 +241,7 @@ const ContactSection = () => {
                                 />
                             </motion.div>
 
-                            {/* Submit Button */}
+
                             <motion.div variants={itemVariants} className="pt-4">
                                 <motion.button
                                     disabled={isSubmitting || isSubmitted}

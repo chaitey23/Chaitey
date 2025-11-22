@@ -36,7 +36,7 @@ const Navbar = () => {
         }
     };
     const openResume = () => {
-        const resumeLink = 'https://drive.google.com/file/d/1kEbsGF-3efGRY6BV4UfWgUzqm2Rq0wjI/view?usp=sharing';
+        const resumeLink = 'https://drive.google.com/file/d/1JvMrJRk0r4-mft7E45cSPuINOeukwmUV/view?usp=sharing';
         window.open(resumeLink, '_blank', 'noopener,noreferrer');
     };
     const links = <>

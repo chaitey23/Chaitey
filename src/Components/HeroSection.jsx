@@ -33,7 +33,7 @@ const HeroSection = () => {
         return () => clearTimeout(timer);
     }, [text, isDeleting, loopNum, titles]);
     const openResume = () => {
-        const resumeLink = 'https://drive.google.com/file/d/1kEbsGF-3efGRY6BV4UfWgUzqm2Rq0wjI/view?usp=sharing';
+        const resumeLink = 'https://drive.google.com/file/d/1JvMrJRk0r4-mft7E45cSPuINOeukwmUV/view?usp=sharing';
         window.open(resumeLink, '_blank', 'noopener,noreferrer');
     };
 
@@ -45,7 +45,7 @@ const HeroSection = () => {
             }}
         >
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                {/* Left Side - Content */}
+
                 <div className="text-white space-y-6 lg:space-y-8">
                     <div className="space-y-4">
                         <h1 className="text-4xl lg:text-6xl font-bold leading-tight uppercase">
@@ -75,7 +75,7 @@ const HeroSection = () => {
 
                         </div>
 
-                        {/* Social Links */}
+
                         <div className="flex gap-6">
                             <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300 text-3xl">
                                 <FaTwitter />
@@ -85,7 +85,7 @@ const HeroSection = () => {
                                 className="text-gray-400 hover:text-white transition-colors duration-300 text-3xl">
                                 <FaGithub />
                             </a>
-                            <a href="https://www.linkedin.com/in/jannatul-ferdouse-chaiteey" className="text-gray-400 hover:text-white transition-colors duration-300 text-3xl">
+                            <a href="https://www.linkedin.com/in/jf-chaitey" className="text-gray-400 hover:text-white transition-colors duration-300 text-3xl">
                                 <FaLinkedin />
                             </a>
                         </div>

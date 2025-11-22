@@ -130,7 +130,7 @@ const socialIconVariants = {
 const socialLinks = [
     {
         icon: FaLinkedin,
-        url: 'https://www.linkedin.com/in/jannatul-ferdouse-chaiteey/',
+        url: 'https://www.linkedin.com/in/jf-chaitey',
         name: 'LinkedIn'
     },
     {
@@ -162,7 +162,7 @@ const AboutMe = () => {
             variants={containerVariants}
         >
             <div className="max-w-7xl mx-auto">
-                {/* Section Header */}
+
                 <motion.div
                     className="text-center mb-16"
                     variants={itemVariants}
@@ -180,7 +180,7 @@ const AboutMe = () => {
                 </motion.div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    {/* Left Side - Image */}
+
                     <motion.div
                         className="relative"
                         variants={imageVariants}
@@ -201,7 +201,7 @@ const AboutMe = () => {
                             </div>
                         </motion.div>
 
-                        {/* Floating Elements */}
+
                         <motion.div
                             className="absolute -top-4 -left-4 w-8 h-8 bg-[#8B5FBF] rounded-full opacity-60"
                             variants={floatingVariants}
@@ -213,13 +213,11 @@ const AboutMe = () => {
                             animate="animate"
                         ></motion.div>
                     </motion.div>
-
-                    {/* Right Side - Content */}
                     <motion.div
                         className="text-white space-y-8"
                         variants={containerVariants}
                     >
-                        {/* Introduction */}
+
                         <motion.div
                             className="space-y-6"
                             variants={itemVariants}
@@ -247,8 +245,6 @@ const AboutMe = () => {
                                 </motion.p>
                             </div>
                         </motion.div>
-
-                        {/* Personality & Hobbies */}
                         <motion.div
                             className="space-y-6"
                             variants={itemVariants}
@@ -291,7 +287,7 @@ const AboutMe = () => {
                             </div>
                         </motion.div>
 
-                        {/* Social Links & Button */}
+
                         <motion.div
                             className="flex flex-col sm:flex-row items-center justify-between gap-6 pt-8"
                             variants={itemVariants}
