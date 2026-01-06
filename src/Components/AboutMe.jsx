@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { FaDownload, FaLinkedin, FaTwitter, FaFacebook, FaCode, FaHeart, FaGamepad, FaMusic, FaCoffee } from 'react-icons/fa';
 import aboutPhoto from '../assets/PortfolioImage.jpeg';
 
-// Animation variants
 const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
