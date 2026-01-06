@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaGithub, FaLinkedin, FaTwitter, FaDownload, FaEye } from 'react-icons/fa';
-import profilePhoto from '../assets/portfolioImg.png'
+import profilePhoto from '../assets/PortfolioImage.jpeg'
 const HeroSection = () => {
     const [text, setText] = useState('');
     const [isDeleting, setIsDeleting] = useState(false);
@@ -105,7 +105,7 @@ const HeroSection = () => {
                                     <img
                                         src={profilePhoto}
                                         alt="Chaitey"
-                                        className="w-full h-full object-contain"
+                                        className="w-full h-full object-contain scale-110"
                                     />
                                 </div>
 

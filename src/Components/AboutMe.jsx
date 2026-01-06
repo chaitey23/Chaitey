@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaDownload, FaLinkedin, FaTwitter, FaFacebook, FaCode, FaHeart, FaGamepad, FaMusic, FaCoffee } from 'react-icons/fa';
-import aboutPhoto from '../assets/portfolioImg.png';
+import aboutPhoto from '../assets/PortfolioImage.jpeg';
 
 // Animation variants
 const containerVariants = {
@@ -194,7 +194,7 @@ const AboutMe = () => {
                                 <motion.img
                                     src={aboutPhoto}
                                     alt="Chaitey"
-                                    className="w-full h-full object-contain"
+                                    className="w-full h-full object-contain scale-110"
                                     whileHover={{ scale: 1.05 }}
                                     transition={{ duration: 0.5 }}
                                 />
