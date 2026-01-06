@@ -60,12 +60,13 @@ const HeroSection = () => {
                         </h2>
                     </div>
 
-                    <p className="text-lg lg:text-xl text-gray-400 leading-relaxed max-w-2xl">
-                        Crafting digital experiences that blend aesthetic elegance with functional excellence.
-                        I transform complex ideas into intuitive, responsive web solutions that engage users
-                        and drive results through clean, efficient code and thoughtful design.
-                    </p>
 
+                    <p className="text-lg lg:text-xl text-gray-300 leading-relaxed max-w-2xl bg-gray-900/30 p-4 rounded-lg border-l-4 border-[#8B5FBF]">
+                        "Building web applications that combine good design with solid functionality.
+                        I work with React, JavaScript, and modern frontend technologies to create
+                        responsive interfaces that are both visually appealing and performant.
+                        I believe in keeping things simple, accessible, and user-centered."
+                    </p>
                     <div className="flex flex-col sm:flex-row items-center gap-6 pt-4">
                         <div className="flex flex-col sm:flex-row gap-4">
                             <button onClick={openResume} className="bg-gradient-to-r from-[#8B5FBF] to-[#6D48C5] text-white px-8 py-4 rounded-full text-lg font-medium uppercase tracking-wider hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 flex items-center gap-2 cursor-pointer">
@@ -92,15 +93,13 @@ const HeroSection = () => {
                     </div>
                 </div>
 
-                {/* Right Side - Image/Illustration */}
                 <div className="relative">
                     <div className="relative z-10 w-80 h-80 lg:w-[500px] lg:h-[500px] mx-auto">
                         <div className="absolute inset-0 bg-gradient-to-r from-[#8B5FBF] to-[#6D48C5] rounded-3xl opacity-20 blur-3xl"></div>
 
-                        {/* Modern Rounded Square */}
                         <div className="relative z-20 w-full h-full flex items-center justify-center">
                             <div className="relative w-72 h-72 lg:w-[450px] lg:h-[450px]">
-                                {/* Main Image with Subtle Rounding */}
+
                                 <div className="w-full h-full rounded-2xl lg:rounded-3xl overflow-hidden border-4 border-white/20 shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
                                     <img
                                         src={profilePhoto}
@@ -109,7 +108,7 @@ const HeroSection = () => {
                                     />
                                 </div>
 
-                                {/* Decorative Corner Elements */}
+
                                 <div className="absolute -top-2 -left-2 w-6 h-6 bg-[#8B5FBF] rounded-lg opacity-70"></div>
                                 <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-[#6D48C5] rounded-lg opacity-70"></div>
                                 <div className="absolute -top-2 -right-2 w-4 h-4 bg-[#8B5FBF] rounded-lg opacity-50"></div>
@@ -118,7 +117,6 @@ const HeroSection = () => {
                         </div>
                     </div>
 
-                    {/* Floating Elements */}
                     <div className="absolute top-10 -left-4 w-8 h-8 bg-[#8B5FBF] rounded-full opacity-60 animate-pulse"></div>
                     <div className="absolute bottom-20 -right-4 w-6 h-6 bg-[#6D48C5] rounded-full opacity-60 animate-bounce"></div>
                     <div className="absolute top-1/2 -right-8 w-4 h-4 bg-[#8B5FBF] rounded-full opacity-40 animate-ping"></div>

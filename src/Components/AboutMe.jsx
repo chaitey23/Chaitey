@@ -231,10 +231,7 @@ const AboutMe = () => {
                                     className="text-gray-300 leading-relaxed italic border-l-4 border-[#8B5FBF] pl-4 font-serif text-lg"
                                     variants={itemVariants}
                                 >
-                                    "In the symphony of <span className="text-[#8B5FBF] font-bold">Frontend Development</span>, I've spent 1 year orchestrating pixels into poetry and logic into luxury.
-                                    My canvas is the browser, my palette is code, and every project becomes a passionate dialogue between form and function.
-                                    Beyond the screen, I'm exploring emerging technologies, contributing to meaningful open-source projects, and constantly
-                                    learning how to make the digital world more intuitive, accessible, and beautiful—one elegant solution at a time."
+                                    "Over the past year in <span className="text-[#8B5FBF] font-bold">Frontend Development</span>,  I've built MERN stack applications—working primarily with React while handling backend integration and database operations. I thrive on solving real problems: making interfaces responsive, accessible, and genuinely useful. What drives me is continuously learning and applying new tools to create web experiences that just work."
                                 </motion.p>
                             </div>
                         </motion.div>

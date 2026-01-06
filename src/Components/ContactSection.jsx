@@ -145,7 +145,7 @@ const ContactSection = () => {
                                         href="tel:+880 1*********"
                                         className="text-white font-medium hover:text-indigo-300 transition-colors duration-300"
                                     >
-                                        +880 1*********
+                                        +880 1234567890
                                     </a>
                                 </div>
                             </motion.div>

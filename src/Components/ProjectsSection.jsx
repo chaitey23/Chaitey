@@ -7,8 +7,28 @@ import newspaper from '../assets/newspaper-fullstack-webs-53e81.web.app_.png'
 const ProjectsSection = () => {
     const [hoveredProject, setHoveredProject] = useState(null);
     const projects = [
+
         {
             id: 1,
+            name: "Newspaper Fullstack Website",
+            image: newspaper,
+            liveLink: "https://newspaper-fullstack-webs-53e81.web.app",
+            githubLink: "https://github.com/chaitey23/newspaper-website",
+            description: "A fullstack newspaper website with real-time news updates, categories, and admin panel.",
+            technologies: ["React", "Node.js", "Express", "MongoDB", "JWT"],
+            challenges: [
+                "Building real-time news feed with instant updates",
+                "Creating comprehensive admin panel for content management",
+                "Implementing user subscription system with different tiers"
+            ],
+            futurePlans: [
+                "Add push notifications for breaking news",
+                "Implement AI-based personalized news recommendation",
+                "Develop progressive web app (PWA) for mobile users"
+            ]
+        },
+        {
+            id: 2,
             name: "Library Management System",
             image: libraryImg,
             liveLink: "https://library-management-31a51.web.app",
@@ -27,7 +47,7 @@ const ProjectsSection = () => {
             ]
         },
         {
-            id: 2,
+            id: 3,
             name: "Gardening Hub Application",
             image: GardenImg,
             liveLink: "https://gardening-hub-application.web.app",
@@ -42,25 +62,6 @@ const ProjectsSection = () => {
                 "Add plant care reminder and tracking system",
                 "Implement AR feature for plant identification",
                 "Create community forum for gardeners to share experiences"
-            ]
-        },
-        {
-            id: 3,
-            name: "Newspaper Fullstack Website",
-            image: newspaper,
-            liveLink: "https://newspaper-fullstack-webs-53e81.web.app",
-            githubLink: "https://github.com/chaitey23/newspaper-website",
-            description: "A fullstack newspaper website with real-time news updates, categories, and admin panel.",
-            technologies: ["React", "Node.js", "Express", "MongoDB", "JWT"],
-            challenges: [
-                "Building real-time news feed with instant updates",
-                "Creating comprehensive admin panel for content management",
-                "Implementing user subscription system with different tiers"
-            ],
-            futurePlans: [
-                "Add push notifications for breaking news",
-                "Implement AI-based personalized news recommendation",
-                "Develop progressive web app (PWA) for mobile users"
             ]
         }
     ];
