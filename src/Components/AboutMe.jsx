@@ -225,22 +225,16 @@ const AboutMe = () => {
                                 Hello! I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8B5FBF] to-[#6D48C5]">Chaitey</span>
                             </h3>
 
+
                             <div className="space-y-4">
                                 <motion.p
-                                    className="text-gray-300 leading-relaxed"
+                                    className="text-gray-300 leading-relaxed italic border-l-4 border-[#8B5FBF] pl-4 font-serif text-lg"
                                     variants={itemVariants}
                                 >
-                                    A passionate <span className="text-[#8B5FBF] font-semibold">Frontend Developer</span> who loves creating
-                                    beautiful and functional web experiences. Started my coding journey 1.5 years ago
-                                    and been fascinated by technology ever since.
-                                </motion.p>
-
-                                <motion.p
-                                    className="text-gray-300 leading-relaxed"
-                                    variants={itemVariants}
-                                >
-                                    I enjoy turning complex problems into simple, intuitive designs. When I'm not coding,
-                                    I'm exploring new tech, contributing to open-source, or learning something new.
+                                    "In the symphony of <span className="text-[#8B5FBF] font-bold">Frontend Development</span>, I've spent 1 year orchestrating pixels into poetry and logic into luxury.
+                                    My canvas is the browser, my palette is code, and every project becomes a passionate dialogue between form and function.
+                                    Beyond the screen, I'm exploring emerging technologies, contributing to meaningful open-source projects, and constantly
+                                    learning how to make the digital world more intuitive, accessible, and beautiful—one elegant solution at a time."
                                 </motion.p>
                             </div>
                         </motion.div>
