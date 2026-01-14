@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaExternalLinkAlt, FaGithub, FaTools } from 'react-icons/fa';
 import { Link } from 'react-router';
 import libraryImg from '../assets/library-management-31a51.web.app_.png'
-import GardenImg from '../assets/gardening-hub-application.web.app_.png'
+import GardenImg from '../assets/gardening-hub-application.web.app.png'
 import newspaper from '../assets/newspaper-fullstack-webs-53e81.web.app_.png'
 const ProjectsSection = () => {
     const [hoveredProject, setHoveredProject] = useState(null);
