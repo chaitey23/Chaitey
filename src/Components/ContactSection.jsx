@@ -90,7 +90,7 @@ const ContactSection = () => {
                 </motion.div>
 
                 <div className="grid lg:grid-cols-2 gap-12 items-start">
-                    {/* Contact Information */}
+
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -105,8 +105,6 @@ const ContactSection = () => {
                                 Whether you have a question or just want to say hi, I'll get back to you!
                             </p>
                         </div>
-
-                        {/* Contact Details */}
                         <div className="space-y-6">
                             <motion.div
                                 whileHover={{ x: 10 }}
